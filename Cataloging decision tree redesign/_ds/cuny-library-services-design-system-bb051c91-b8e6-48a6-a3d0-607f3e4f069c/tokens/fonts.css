@@ -1,0 +1,23 @@
+/* Typography — CUNY Office of Communications & Marketing, University Identity >
+   Typography (cuny.edu):
+     "Our sans serif typeface is Trade Gothic Next … In instances when Trade
+      Gothic Next is not available, Arial can be substituted. For Web usage,
+      Libre Franklin by Google Fonts is the preferred typeface."
+
+   This system is web-first, so it ships Libre Franklin — CUNY's own stated
+   preference for web — with Arial as the sanctioned fallback.
+
+   Trade Gothic Next LT Pro is deliberately NOT referenced in any token: it is a
+   licensed Linotype face, no web files are available to this project, and naming
+   an absent family in a stack only produces a broken reference. For print and
+   signage set Trade Gothic Next in the layout application, per the guideline.
+   See readme.md > Visual foundations > Typography. */
+@import url("https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap");
+:root{
+  --font-sans:"Libre Franklin",Arial,Helvetica,sans-serif;
+  --font-display:var(--font-sans);
+  /* Retained alias: CUNY specifies no condensed web face. Resolves to the sans. */
+  --font-condensed:var(--font-sans);
+  /* Addition, not CUNY-specified — see readme.md > Intentional additions. */
+  --font-mono:"IBM Plex Mono",ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+}

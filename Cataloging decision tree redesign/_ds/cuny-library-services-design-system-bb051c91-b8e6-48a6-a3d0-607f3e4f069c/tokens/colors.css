@@ -1,0 +1,159 @@
+/* ============================================================================
+   Colours — sourced verbatim from CUNY Office of Communications & Marketing,
+   University Identity > Colors (cuny.edu). Hex values are the published ones.
+   Do not eyeball or derive brand colours; if a value is not below, it is not
+   a CUNY colour. The supplied OLS logo files were built to an older CUNY Blue
+   (#1D3A83) and are NOT the colour source — see readme.md.
+   ========================================================================= */
+:root{
+  /* ---------- PRIMARY. ~50% of any design. Never omit CUNY Blue. ---------- */
+  --cuny-blue:#0033A1;   /* PMS 286 C   · CMYK 100/75/0/4 · RGB 0/51/161 */
+  --taxi:#FFB71B;        /* PMS 1235 C  · CMYK 0/31/98/0  · RGB 255/183/27 */
+
+  /* ---------- SECONDARY. Support and visual interest, in moderation. ---------- */
+  --indigo:#011D49;      /* PMS 2768 C */
+  --azure:#1F5CFF;       /* PMS 285 C  */
+  --deep-cyan:#00AFEF;   /* PMS 305 C  */
+  --sky:#A3C9FF;         /* PMS 7451 C */
+  --lemonade:#FFEE1D;    /* PMS 803 C  */
+  --cream:#FFFCD5;       /* PMS 9141 C */
+
+  /* ---------- NEUTRAL. Support, in moderation. Warm, not blue-grey. ---------- */
+  --pearl:#F7F4EB;       /* PMS 9060 C */
+  --dove:#D8D7D6;        /* PMS Cool Gray 1 C */
+  --slate:#688197;       /* PMS 2165 C */
+  --charcoal:#383838;    /* PMS Black 7 C */
+  --pewter:#76777A;      /* PMS Cool Gray 9 C */
+  --ochre:#C89210;       /* PMS 1245 C */
+  --umber:#896B25;       /* PMS 1265 C */
+
+  /* ---------- ACCENT. Highlights only. Never a primary colour. ---------- */
+  --strawberry:#EA0045;  /* PMS 192 C  */
+  --hot-pink:#E81F75;    /* PMS 213 C  */
+  --bubble-gum:#FF9CCD;  /* PMS 210 C  */
+  --blush:#FFDCEE;       /* PMS 705 C  */
+  --cranberry:#BF0D3E;   /* PMS 193 C  */
+  --coral:#FF7370;       /* PMS 805 C  */
+  --salmon:#FFCBCA;      /* PMS 7415 C */
+  --grape:#510C76;       /* PMS 2607 C */
+  --lilac:#9A3CB0;       /* PMS 7442 C */
+  --thistle:#DEC2EB;     /* PMS 263 C  */
+  --sea-green:#005C5A;   /* PMS 561 C  */
+  --chartreuse:#C2D500;  /* PMS 382 C  */
+  --liberty:#45C2B1;     /* PMS 3258 C */
+  --mint:#B5EBD8;        /* PMS 331 C  */
+
+  --white:#FFFFFF;
+  --black:#000000;
+
+  /* ============ Working scales ============
+     Steps that are NOT published CUNY colours exist only to make UI states
+     possible (hover, disabled, hairlines). Every published colour is marked. */
+  --blue-950:#01122E;
+  --blue-900:#011D49;   /* = Indigo */
+  --blue-800:#002679;
+  --blue-700:#0033A1;   /* = CUNY Blue */
+  --blue-600:#0F45BE;
+  --blue-500:#1F5CFF;   /* = Azure */
+  --blue-400:#5C87FF;
+  --blue-300:#A3C9FF;   /* = Sky */
+  --blue-200:#C6DBFF;
+  --blue-100:#E4EEFF;
+  --blue-50:#F2F7FF;
+
+  --gray-950:#1A1A1A;
+  --gray-900:#383838;   /* = Charcoal */
+  --gray-800:#4D4D4D;
+  --gray-700:#5F6062;
+  --gray-600:#76777A;   /* = Pewter */
+  --gray-500:#949599;
+  --gray-450:#8A8B8F;   /* not a CUNY colour — lowest step reaching 3:1 on white,
+                           so interactive control boundaries meet WCAG 1.4.11 */
+  --gray-400:#B4B4B3;
+  --gray-300:#D8D7D6;   /* = Dove */
+  --gray-200:#E6E5E2;
+  --gray-150:#EEEDE8;
+  --gray-100:#F2F1EC;
+  --gray-50:#F7F4EB;    /* = Pearl */
+
+  /* Status ramps, built only from published CUNY colours */
+  --green-700:#004745;
+  --green-600:#005C5A;  /* = Sea Green */
+  --green-100:#B5EBD8;  /* = Mint */
+  --amber-700:#896B25;  /* = Umber, for warning TEXT (AA on white) */
+  --amber-600:#C89210;  /* = Ochre, for warning MARKS */
+  --amber-100:#FFFCD5;  /* = Cream */
+  --red-700:#8E0A2E;
+  --red-600:#BF0D3E;    /* = Cranberry */
+  --red-100:#FFCBCA;    /* = Salmon */
+
+  /* ================= Semantic aliases ================= */
+  /* Text */
+  --text-body:var(--charcoal);
+  --text-heading:var(--indigo);
+  /* Pewter (4.48:1) and Slate (4.06:1) are published CUNY colours but fall short
+     of WCAG AA for body-size text, so the muted/subtle TEXT aliases point at
+     darker working steps. Use Pewter and Slate directly for rules, marks, and
+     display-size type only — never for 13–16px copy. */
+  --text-muted:var(--gray-800);    /* #4D4D4D · 8.45:1 on white */
+  --text-subtle:var(--gray-700);   /* #5F6062 · 6.29:1 on white */
+  --text-inverse:var(--white);
+  --text-link:var(--cuny-blue);
+  --text-link-hover:var(--indigo);
+  --text-accent:var(--cuny-blue);
+  --text-danger:var(--cranberry);
+  --text-success:var(--sea-green);
+  --text-warning:var(--umber);
+
+  /* Surfaces */
+  --surface-page:var(--white);
+  --surface-sunken:var(--pearl);
+  --surface-card:var(--white);
+  --surface-raised:var(--white);
+  --surface-brand:var(--cuny-blue);
+  --surface-brand-deep:var(--indigo);
+  --surface-brand-subtle:var(--blue-50);
+  --surface-neutral-subtle:var(--gray-100);
+  --surface-hover:var(--gray-100);
+  --surface-active:var(--gray-200);
+  --surface-overlay:rgba(1,29,73,.6);
+
+  /* Borders */
+  --border-subtle:var(--gray-200);
+  --border-default:var(--dove);        /* decorative hairlines only — 1.44:1 */
+  --border-strong:var(--gray-450);     /* 3.40:1 — meets WCAG 1.4.11 */
+  --border-control:var(--gray-450);    /* boundary of any focusable control */
+  --border-brand:var(--cuny-blue);
+  --border-focus:var(--azure);
+
+  /* Controls */
+  --control-primary-bg:var(--cuny-blue);
+  --control-primary-bg-hover:var(--blue-800);
+  --control-primary-bg-active:var(--indigo);
+  --control-primary-fg:var(--white);
+  --control-secondary-bg:var(--white);
+  --control-secondary-fg:var(--cuny-blue);
+  --control-secondary-border:var(--cuny-blue);
+  --control-ghost-fg:var(--gray-700);
+  --control-disabled-bg:var(--gray-150);
+  --control-disabled-fg:var(--gray-700);  /* exempt from 1.4.3, but kept legible */
+
+  /* Rules */
+  --rule-brand:var(--cuny-blue);
+  --rule-accent:var(--taxi);
+  --rule-hairline:var(--gray-200);
+
+  /* Non-text contrast reference (WCAG 1.4.11, needs 3:1 against its neighbour):
+       --border-control  3.40  PASS   control boundaries
+       --border-strong   3.40  PASS   checkbox and radio outlines
+       --border-focus    5.21  PASS   Azure focus ring on white
+       --border-default  1.44  n/a    decorative hairline, never a control edge
+       --rule-hairline   1.26  n/a    decorative
+       --rule-accent     1.74  n/a    decorative Taxi rule; never carries meaning alone */
+
+  /* Status tint borders, so components stop carrying literal hexes */
+  --border-success:#8FD9BE;
+  --border-warning:#EDDF9E;
+  --border-danger:#F5A9A7;
+  --border-info:var(--blue-200);
+}
